@@ -41,11 +41,14 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "formidable": "^1.2.2",
+    "jsonwebtoken": "^9.0.1",
     "koa": "^2.13.1",
+    "koa-bodyparser": "^4.4.1",
     "koa-jwt": "^3.5.2",
     "koa-router": "^10.0.1",
     "lodash": "^4.17.21",
-    "on-finished": "^2.4.1"
+    "on-finished": "^2.4.1",
+    "uuid": "^9.0.0"
   },
   "eslintConfig": {
     "extends": [
