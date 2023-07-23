@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
-    "test": "better-npm-run test",
+    "test": "ava",
     "lint": "eslint src tests",
     "precommit": "lint-staged"
   },
@@ -23,26 +23,29 @@
     ]
   },
   "keywords": [],
-  "author": "Illya Klymov <illya@javascript.ninja",
+  "author": "Illya Klymov <illya@javascript.ninja>",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^1.0.0-beta.5.1",
-    "better-npm-run": "^0.1.0",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.12.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.2.0",
-    "supertest-koa-agent": "^0.3.0"
+    "@babel/core": "^7.12.16",
+    "@babel/register": "^7.12.13",
+    "ava": "^3.15.0",
+    "better-npm-run": "^0.1.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.6",
+    "supertest-koa-agent": "^0.3.2"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "koa": "^2.5.1",
-    "koa-jwt": "^3.3.2",
-    "koa-router": "^7.4.0",
-    "lodash": "^4.17.10",
-    "rc": "^1.2.8"
+    "formidable": "^1.2.2",
+    "koa": "^2.13.1",
+    "koa-jwt": "^3.5.2",
+    "koa-router": "^10.0.1",
+    "lodash": "^4.17.21",
+    "on-finished": "^2.4.1"
   },
   "eslintConfig": {
     "extends": [
@@ -55,14 +58,14 @@
   },
   "prettier": {
     "singleQuote": true,
-    "trailingComma": true
+    "trailingComma": "es5"
   },
   "ava": {
     "files": [
       "tests/**/*.js",
       "!tests/__data/**/*.js"
     ],
-    "babel": false,
+    "babel": true,
     "compileEnhancements": false
   }
 }
